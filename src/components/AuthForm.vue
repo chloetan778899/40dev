@@ -26,6 +26,7 @@ const showYobTooltip = ref(false)
 const widgetKey = ref(0)
 const altchaPayload = ref('')
 const isMounted = ref(false)
+const messageType = ref<'error' | 'success'>('error')
 onMounted(() => {
   isMounted.value = true
 })
@@ -309,11 +310,12 @@ const handleSubmit = async (event: Event) => {
             }
           }
       } else {
-          console.warn('Signup success, but Auto-login failed')
+          console.warn(t('auth.form.logs.autologin_fail'))
           
           if (isMounted.value) {
             preserveMessage.value = true 
             isLoginView.value = true 
+            messageType.value = 'success'
             serverErrorMessage.value = t('auth.form.success.signup_msg') 
           }
       }
@@ -355,6 +357,7 @@ const handleSubmit = async (event: Event) => {
     console.error(e)
     if (isMounted.value) {
         modalStatus.value = 'error'
+        messageType.value = 'error'
         serverErrorMessage.value = mapBackendError((e as Error).message)
         showModal.value = true
         altchaPayload.value = '' 
@@ -374,15 +377,19 @@ const handleSubmit = async (event: Event) => {
     <form @submit.prevent="handleSubmit" class="auth-form flex flex-col gap-0 w-full relative">
         
         <div class="absolute opacity-0 -z-50 -left-2499.75 pointer-events-none" aria-hidden="true">
-           <input v-model="validationControl" type="text" name="email" tabindex="-1" autocomplete="off">
+           <input v-model="validationControl" type="text" name="bot-check" tabindex="-1" autocomplete="off">
         </div>
 
         <Transition name="slide-fade" mode="out-in">
         <div :key="isLoginView ? 'login' : 'signup'" class="w-full pt-2">
             
             <div v-if="serverErrorMessage && isLoginView" 
-                class="mb-4 p-3 rounded text-sm bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300 border border-red-200 dark:border-red-800">
-                {{ serverErrorMessage }}
+                class="mb-4 p-3 rounded text-sm border transition-colors duration-300"
+                :class="messageType === 'success' 
+                    ? 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 border-green-200 dark:border-green-800'
+                    : 'bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300 border-red-200 dark:border-red-800'"
+            >
+            {{ serverErrorMessage }}
             </div>
 
             <div v-if="!isLoginView" class="form-group mb-4">
