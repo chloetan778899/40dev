@@ -19,8 +19,8 @@ const handleKeydown = (e: KeyboardEvent) => {
 
 const iconColorClass = computed(() => 
   props.type === 'error' 
-    ? 'text-[#d32f2f] dark:text-[#ef5350]' 
-    : 'text-[#10b981] dark:text-[#34d399]'
+    ? 'text-[#d32f2f] dark:text-[#ef5350] bg-red-50 dark:bg-red-900/20' 
+    : 'text-[#10b981] dark:text-[#34d399] bg-green-50 dark:bg-green-900/20'
 );
 
 const iconName = computed(() => 
@@ -59,8 +59,8 @@ onUnmounted(() => document.removeEventListener('keydown', handleKeydown));
             class="relative w-full max-w-85 p-8 text-center rounded-3xl bg-bg-card border border-border shadow-2xl overflow-hidden flex flex-col items-center"
             role="dialog"
           >
-            <div class="mb-5" :class="iconColorClass">
-              <span class="material-icons-round text-[80px] leading-none">{{ iconName }}</span>
+            <div class="mb-5 w-12 h-12 flex items-center justify-center rounded-full" :class="iconColorClass">
+              <span class="material-icons-round text-2xl leading-none">{{ iconName }}</span>
             </div>
 
             <h3 class="text-xl font-semibold text-text-main mb-3">
