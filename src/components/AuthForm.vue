@@ -384,12 +384,13 @@ const handleSubmit = async (event: Event) => {
         <div :key="isLoginView ? 'login' : 'signup'" class="w-full pt-2">
             
             <div v-if="serverErrorMessage && isLoginView" 
-                class="mb-4 p-3 rounded text-sm border"
+                class="mb-4 p-3 rounded text-sm border flex items-center gap-2"
                 :class="messageType === 'success' 
                     ? 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 border-green-200 dark:border-green-800'
                     : 'bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300 border-red-200 dark:border-red-800'"
             >
-            {{ serverErrorMessage }}
+              <span class="material-icons-round text-[1em] leading-none" style="font-size: inherit;">{{ messageType === 'success' ? 'check_circle' : 'error' }}</span>
+              <span>{{ serverErrorMessage }}</span>
             </div>
 
             <div v-if="!isLoginView" class="form-group mb-4">
@@ -461,7 +462,10 @@ const handleSubmit = async (event: Event) => {
                         {{ isLoginView ? $t('auth.form.label_email_signin') : $t('auth.form.label_email_signup') }}
                     </label>
                 </div>
-                <div v-if="emailTouched && userEmailAddress && emailError" class="text-[#d32f2f] text-xs font-medium mt-1 ml-1 block">{{ emailError }}</div>
+                <div v-if="emailTouched && userEmailAddress && emailError" class="text-[#d32f2f] text-xs font-medium mt-1 ml-1 flex items-center gap-1">
+                    <span class="material-icons-round text-[1em] leading-none" style="font-size: inherit;">error</span>
+                    <span>{{ emailError }}</span>
+                </div>
             </div>
 
             <template v-if="!isLoginView">
@@ -515,8 +519,9 @@ const handleSubmit = async (event: Event) => {
                             </div>
                         </div>
                     </div>
-                    <div v-if="!isLoginView && formSubmitted && !refId" class="text-[#d32f2f] text-xs font-medium mt-1 ml-1 block">
-                        {{ $t('auth.form.errors.referrer_required') }}
+                    <div v-if="!isLoginView && formSubmitted && !refId" class="text-[#d32f2f] text-xs font-medium mt-1 ml-1 flex items-center gap-1">
+                        <span class="material-icons-round text-[1em] leading-none" style="font-size: inherit;">error</span>
+                        <span>{{ $t('auth.form.errors.referrer_required') }}</span>
                     </div>
                 </div>
 
@@ -562,7 +567,10 @@ const handleSubmit = async (event: Event) => {
                         </label>
 
                     </div>
-                    <div v-if="phone && phoneError" class="text-[#d32f2f] text-xs font-medium mt-1 ml-1 block">{{ phoneError }}</div>
+                    <div v-if="phone && phoneError" class="text-[#d32f2f] text-xs font-medium mt-1 ml-1 flex items-center gap-1">
+                        <span class="material-icons-round text-[1em] leading-none" style="font-size: inherit;">error</span>
+                        <span>{{ phoneError }}</span>
+                    </div>
                 </div>
             </template>
 
@@ -601,7 +609,10 @@ const handleSubmit = async (event: Event) => {
                         <span class="material-icons-round text-[18px]">{{ isPasswordVisible ? 'visibility_off' : 'visibility' }}</span>
                     </button>
                 </div>
-                <div v-if="!isLoginView && password && passwordError" class="text-[#d32f2f] text-xs font-medium mt-1 ml-1 block">{{ passwordError }}</div>
+                <div v-if="!isLoginView && password && passwordError" class="text-[#d32f2f] text-xs font-medium mt-1 ml-1 flex items-center gap-1">
+                    <span class="material-icons-round text-[1em] leading-none" style="font-size: inherit;">error</span>
+                    <span>{{ passwordError }}</span>
+                </div>
                 
                 <div v-if="isLoginView" class="flex justify-end mt-1 mr-1 relative z-5">
                     <span class="forgot-pass-text text-[0.75rem] text-text-sub font-normal inline-block py-0 opacity-80 cursor-default">{{ $t('auth.form.forgot_password') }}</span>
@@ -644,7 +655,10 @@ const handleSubmit = async (event: Event) => {
                             <span class="material-icons-round text-[18px]">{{ isConfirmVisible ? 'visibility_off' : 'visibility' }}</span>
                         </button>
                     </div>
-                    <div v-if="confirmPassword && confirmError" class="text-[#d32f2f] text-xs font-medium mt-1 ml-1 block">{{ confirmError }}</div>
+                    <div v-if="confirmPassword && confirmError" class="text-[#d32f2f] text-xs font-medium mt-1 ml-1 flex items-center gap-1">
+                        <span class="material-icons-round text-[1em] leading-none" style="font-size: inherit;">error</span>
+                        <span>{{ confirmError }}</span>
+                    </div>
                 </div>
 
                 <div class="form-group mb-4">
@@ -695,7 +709,10 @@ const handleSubmit = async (event: Event) => {
                             </div>
                         </div>
                     </div>
-                    <div v-if="yob && yobError" class="text-[#d32f2f] text-xs font-medium mt-1 ml-1 block">{{ yobError }}</div>
+                    <div v-if="yob && yobError" class="text-[#d32f2f] text-xs font-medium mt-1 ml-1 flex items-center gap-1">
+                        <span class="material-icons-round text-[1em] leading-none" style="font-size: inherit;">error</span>
+                        <span>{{ yobError }}</span>
+                    </div>
                 </div>
             </template>
 
