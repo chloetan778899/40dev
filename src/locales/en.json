@@ -200,6 +200,9 @@
         "has_account": "Already have an account?",
         "signin": "Sign in"
       },
+      "logs": {
+        "autologin_fail": "Signup successful, but Auto-login failed"
+      },
       "errors": {
         "email": "Please enter a valid email address.",
         "pass_length": "Use 6 characters or more for your password.",
