@@ -1,0 +1,195 @@
+{
+  "nav": {
+    "signin": "Entrar",
+    "signup": "Criar Conta"
+  },
+  "contact": {
+    "title": "Entre em Contato",
+    "subtitle": "Adoraríamos ouvir você.",
+    "name": "Nome",
+    "email": "E-mail",
+    "message": "Mensagem",
+    "submit": "Enviar Mensagem",
+    "success": "Mensagem enviada."
+  },
+  "home": {
+    "hero": {
+      "title": "Zero configuração<br>para implantar. Compartilhe seu trabalho instantaneamente.",
+      "subtitle": "Um centro de controle para aplicações frontend com infraestrutura em tempo real e insights de tráfego."
+    },
+    "partners": {
+      "trusted_prefix": "Confiado pelos melhores",
+      "trusted_suffix": "times.",
+      "typewriter": {
+        "web_apps": "aplicações web",
+        "ecommerce": "e-commerce",
+        "marketing": "marketing",
+        "education": "educação",
+        "security": "segurança",
+        "finance": "finanças",
+        "healthcare": "saúde",
+        "software": "software",
+        "ai": "IA"
+      }
+    },
+    "workflow": {
+      "origin": "Origem",
+      "tracking": {
+        "eyebrow": "Monitoramento",
+        "title": "Monitorar Atividade",
+        "desc": "Visualize picos de tráfego em tempo real e o desempenho do sistema rapidamente."
+      },
+      "processing": {
+        "eyebrow": "Processamento",
+        "title": "Coordenação Estratégica",
+        "desc": "Sincronização em tempo real dos seus registros em todas as instâncias globais."
+      },
+      "unifying": {
+        "eyebrow": "Unificação",
+        "title": "Um Único Lugar",
+        "desc": "Centralize especificações, documentos, projetos e muito mais em um único painel."
+      }
+    },
+    "security": {
+      "main_title": "Segurança integrada. Incluída para todos.",
+      "main_subtitle": "Nosso firewall oferece proteção em todo o sistema, protegendo todos os usuários por padrão.",
+      "firewall": {
+        "title": "Firewall",
+        "desc": "Proteção resiliente na borda"
+      },
+      "waf": {
+        "title": "Firewall de aplicação web",
+        "desc": "Protege o tráfego da aplicação contra ameaças"
+      },
+      "workspace": {
+        "title": "Segurança do workspace",
+        "desc": "Controle de acesso confiável para equipes"
+      }
+    },
+    "code": {
+      "title": "Simplicidade em primeiro lugar, sempre.",
+      "desc": "Painéis intuitivos, automação visual e guias completos que se integram ao seu fluxo de trabalho sem escrever uma única linha de código."
+    },
+    "stats": {
+      "lines_code": "Linhas de código analisadas diariamente",
+      "languages": "Linguagens de programação, frameworks e tecnologias IaC suportadas",
+      "downloads": "Downloads da imagem Docker"
+    },
+    "fluid": {
+      "title": "Operações de produto autônomas.",
+      "desc": "Automatize o excesso. Recursos com IA sugerem e aplicam proativamente responsáveis, equipes, rótulos e projetos.",
+      "ai_detection": "Detecção por IA",
+      "assign": {
+        "header": "Atribuição Detectada",
+        "sub": "Analisando carga de trabalho...",
+        "action": "Sugerido: {'@'}XYZ (98%)"
+      },
+      "label": {
+        "header": "Análise de Contexto",
+        "sub": "Escaneando descrição...",
+        "action": "Aplicado: [Bug] [Alta]"
+      },
+      "route": {
+        "header": "Roteando Solicitação",
+        "sub": "Correspondendo especialização...",
+        "action": "Enviado para: Equipe Frontend"
+      }
+    },
+    "cta": "Construa algo incrível.",
+    "footer": {
+      "about_title": "Sobre Nós",
+      "sf_title": "São Francisco",
+      "sf_address": "44 Tehama Street<br>San Francisco, CA 94105<br>EUA",
+      "london_title": "Londres",
+      "london_address": "123 Great Portland St<br>Londres, W1W 6LE<br>Reino Unido",
+      "mission": "Oferecemos a experiência do desenvolvedor e a infraestrutura para criar, escalar e proteger uma web mais rápida e personalizada.",
+      "copyright": "&copy; 2026 Verdia Inc. Todos os direitos reservados.",
+      "status": "Todos os sistemas operando normalmente.",
+      "links": {
+        "terms": "Termos de Serviço",
+        "privacy": "Política de Privacidade",
+        "cookies": "Política de Cookies",
+        "legal": "Avisos Legais e Registro"
+      }
+    }
+  },
+  "terms": {
+    "sidebar": {
+      "title": "Centro Legal",
+      "tos": "Termos de Serviço",
+      "privacy": "Política de Privacidade",
+      "cookies": "Política de Cookies",
+      "registration": "Legal e Registro"
+    },
+    "title": "Legal",
+    "tos": {
+      "title": "Termos de Serviço",
+      "last_updated": "Última revisão em 2 de maio de 2024",
+      "content": "POR FAVOR, LEIA ATENTAMENTE OS SEGUINTES TERMOS DE SERVIÇO DO PORTAL ANTES DE SE ASSOCIAR À EMPRESA OU UTILIZAR OS SERVIÇOS..."
+    },
+    "privacy": {
+      "title": "Política de Privacidade",
+      "last_updated": "Última revisão em 11 de janeiro de 2024",
+      "content": "Na Lean Labs, estamos fortemente comprometidos em proteger e respeitar sua privacidade..."
+    },
+    "cookies": {
+      "title": "Política de Cookies",
+      "last_updated": "Vigente a partir de 19 de novembro de 2015",
+      "content": "Na Empresa, acreditamos em ser claros e transparentes sobre como coletamos e utilizamos dados..."
+    },
+    "registration": {
+      "title": "Aviso Legal e Registro",
+      "content": "<strong>1. Partes</strong><br>As partes destas Condições Gerais de Uso são a Empresa e você como usuário..."
+    },
+    "footer": "&copy; <span id=\"year\">2026</span> Verdia Inc. Todos os direitos reservados."
+  },
+  "auth": {
+    "footer": {
+      "terms": "Termos de Serviço",
+      "privacy": "Política de Privacidade",
+      "cookies": "Política de Cookies",
+      "legal": "Legal e Registro"
+    },
+    "form": {
+      "title_signin": "Entrar",
+      "title_signup": "Criar Conta",
+      "label_display_name": "Nome de Exibição",
+      "label_email_signin": "Nome de Exibição ou E-mail",
+      "label_email_signup": "E-mail",
+      "label_referrer": "ID da Conta Referenciadora",
+      "tooltip_referrer": "Necessário para garantir identificação e autorização adequadas, permitindo a designação de um coach.",
+      "label_phone": "Número de Telefone",
+      "label_password": "Senha",
+      "label_confirm_password": "Confirmar Senha",
+      "label_yob": "Ano de Nascimento",
+      "hint_yob": "*Obrigatório para verificação de idade.",
+      "recaptcha": {
+        "protected": "protegido por",
+        "brand": "reCAPTCHA",
+        "privacy": "Privacidade",
+        "terms": "Termos"
+      },
+      "agreement": "Ao criar uma conta, certifico que tenho 20 anos ou mais, concordo com os Termos de Serviço e li a Política de Privacidade e Cookies.",
+      "forgot_password": "Esqueceu a senha? Entre em contato com o suporte.",
+      "btn_signin": "Entrar",
+      "btn_signup": "Criar Conta",
+      "toggle": {
+        "no_account": "Não tem uma conta?",
+        "create": "Criar conta",
+        "has_account": "Já tem uma conta?",
+        "signin": "Entrar"
+      },
+      "errors": {
+        "email": "Por favor, insira um endereço de e-mail válido.",
+        "pass_length": "Deve ter pelo menos 6 caracteres.",
+        "pass_complex": "Deve conter 1 letra maiúscula e 1 número.",
+        "pass_match": "As senhas não coincidem.",
+        "year_invalid": "Por favor, insira um ano válido (1900-{year})."
+      },
+      "success": {
+        "signin": "Login realizado com sucesso.",
+        "signup": "Conta criada com sucesso."
+      }
+    }
+  }
+}
