@@ -384,7 +384,7 @@ const handleSubmit = async (event: Event) => {
         <div :key="isLoginView ? 'login' : 'signup'" class="w-full pt-2">
             
             <div v-if="serverErrorMessage && isLoginView" 
-                class="mb-4 p-3 rounded text-sm border transition-colors duration-300"
+                class="mb-4 p-3 rounded text-sm border"
                 :class="messageType === 'success' 
                     ? 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 border-green-200 dark:border-green-800'
                     : 'bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300 border-red-200 dark:border-red-800'"
@@ -405,7 +405,7 @@ const handleSubmit = async (event: Event) => {
                         placeholder=" "
                         spellcheck="false"
                         :disabled="isLoading"
-                        class="peer w-full p-[14px_16px] text-base rounded bg-transparent border outline-none transition-colors duration-300 z-1 focus:border-2 focus:p-[13px_15px] dark:hover:bg-white/2 dark:focus:bg-white/3 disabled:opacity-50 disabled:cursor-not-allowed"
+                        class="peer w-full p-[14px_16px] text-base rounded bg-transparent border outline-none transition-[top,transform,scale,color] z-1 focus:border-2 focus:p-[13px_15px] dark:hover:bg-white/2 dark:focus:bg-white/3 disabled:opacity-50 disabled:cursor-not-allowed"
                         :class="[
                             (!isLoginView && formSubmitted && !displayName)
                             ? 'border-[#d32f2f] text-[#d32f2f] focus:border-[#d32f2f] placeholder-shown:border-[#d32f2f]'
@@ -413,7 +413,7 @@ const handleSubmit = async (event: Event) => {
                         ]"
                     >
                     <label 
-                        class="absolute left-3 top-0 -translate-y-1/2 scale-75 bg-bg-body px-1 text-base font-normal leading-none transition-[top,transform,scale,color] duration-200 ease-standard will-change-[top,transform] pointer-events-none z-2 origin-left peer-focus:top-0 peer-focus:-translate-y-1/2 peer-focus:scale-75 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100"
+                        class="absolute left-3 top-0 -translate-y-1/2 scale-75 bg-bg-body px-1 text-base font-normal leading-none transition-[top,transform,scale,color] ease-standard will-change-[top,transform] pointer-events-none z-2 origin-left peer-focus:top-0 peer-focus:-translate-y-1/2 peer-focus:scale-75 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100"
                         :class="[
                             (!isLoginView && formSubmitted && !displayName)
                             ? 'text-[#d32f2f] peer-focus:text-[#d32f2f] peer-placeholder-shown:text-[#d32f2f]'
@@ -443,7 +443,7 @@ const handleSubmit = async (event: Event) => {
                         placeholder=" "
                         spellcheck="false"
                         :disabled="isLoading"
-                        class="peer w-full p-[14px_16px] text-base rounded bg-transparent border outline-none transition-colors duration-300 z-1 focus:border-2 focus:p-[13px_15px] dark:hover:bg-white/2 dark:focus:bg-white/3 disabled:opacity-50 disabled:cursor-not-allowed"
+                        class="peer w-full p-[14px_16px] text-base rounded bg-transparent border outline-none transition-[top,transform,scale,color] z-1 focus:border-2 focus:p-[13px_15px] dark:hover:bg-white/2 dark:focus:bg-white/3 disabled:opacity-50 disabled:cursor-not-allowed"
                         :class="[
                             (userEmailAddress && emailError)
                             ? 'border-[#d32f2f] text-[#d32f2f] focus:border-[#d32f2f] placeholder-shown:border-[#d32f2f]' 
@@ -451,7 +451,7 @@ const handleSubmit = async (event: Event) => {
                         ]"
                     >
                     <label 
-                        class="absolute left-3 top-0 -translate-y-1/2 scale-75 bg-bg-body px-1 text-base font-normal leading-none duration-200 ease-standard will-change-[top,transform] pointer-events-none z-2 origin-left peer-focus:top-0 peer-focus:-translate-y-1/2 peer-focus:scale-75 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100"
+                        class="absolute left-3 top-0 -translate-y-1/2 scale-75 bg-bg-body px-1 text-base font-normal leading-none ease-standard will-change-[top,transform] pointer-events-none z-2 origin-left peer-focus:top-0 peer-focus:-translate-y-1/2 peer-focus:scale-75 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100"
                         :class="[
                             (userEmailAddress && emailError)
                             ? 'text-[#d32f2f] peer-focus:text-[#d32f2f] peer-placeholder-shown:text-[#d32f2f]'
@@ -479,7 +479,7 @@ const handleSubmit = async (event: Event) => {
                             placeholder=" "
                             spellcheck="false"
                             :disabled="isLoading"
-                            class="peer w-full p-[14px_16px] text-base pr-12 rounded bg-transparent border outline-none transition-colors duration-300 z-1 focus:border-2 focus:p-[13px_15px] dark:hover:bg-white/2 dark:focus:bg-white/3 disabled:opacity-50 disabled:cursor-not-allowed"
+                            class="peer w-full p-[14px_16px] text-base pr-12 rounded bg-transparent border outline-none transition-[top,transform,scale,color] z-1 focus:border-2 focus:p-[13px_15px] dark:hover:bg-white/2 dark:focus:bg-white/3 disabled:opacity-50 disabled:cursor-not-allowed"
                             :class="[
                                 (!isLoginView && formSubmitted && !refId)
                                 ? 'border-[#d32f2f] text-[#d32f2f] focus:border-[#d32f2f] placeholder-shown:border-[#d32f2f]'
@@ -487,7 +487,7 @@ const handleSubmit = async (event: Event) => {
                             ]"
                         >
                         <label 
-                            class="absolute left-3 top-0 -translate-y-1/2 scale-75 bg-bg-body px-1 text-base font-normal leading-none duration-200 ease-standard will-change-[top,transform] pointer-events-none z-2 origin-left peer-focus:top-0 peer-focus:-translate-y-1/2 peer-focus:scale-75 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100"
+                            class="absolute left-3 top-0 -translate-y-1/2 scale-75 bg-bg-body px-1 text-base font-normal leading-none ease-standard will-change-[top,transform] pointer-events-none z-2 origin-left peer-focus:top-0 peer-focus:-translate-y-1/2 peer-focus:scale-75 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100"
                             :class="[
                                 (!isLoginView && formSubmitted && !refId)
                                 ? 'text-[#d32f2f] peer-focus:text-[#d32f2f] peer-placeholder-shown:text-[#d32f2f]'
@@ -502,11 +502,11 @@ const handleSubmit = async (event: Event) => {
                             v-click-outside="() => showTooltip = false"
                             :title="referrerTooltipTitle">
         
-                            <span class="material-icons-round text-[18px] text-[#9ca3af] dark:text-[#6b7280] group-hover:text-[#0d0d0d] dark:group-hover:text-white transition-colors duration-200">
+                            <span class="material-icons-round text-[18px] text-[#9ca3af] dark:text-[#6b7280] group-hover:text-[#0d0d0d] dark:group-hover:text-white transition-[top,transform,scale,color]">
                                 info
                             </span>
 
-                            <div class="absolute bottom-full right-2 mb-2 w-max max-w-50 p-2 bg-[#1a1a1a] dark:bg-[#333333] text-white text-[11px] font-medium text-center rounded shadow-xl opacity-0 invisible transition-all duration-200 z-50 pointer-events-none
+                            <div class="absolute bottom-full right-2 mb-2 w-max max-w-50 p-2 bg-[#1a1a1a] dark:bg-[#333333] text-white text-[11px] font-medium text-center rounded shadow-xl opacity-0 invisible transition-[top,transform,scale,color] z-50 pointer-events-none
                                         group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto
                                         peer-focus:opacity-100 transform origin-bottom translate-y-1 group-hover:translate-y-0"
                                     :class="{'opacity-100 visible translate-y-0': showTooltip}">
@@ -524,7 +524,7 @@ const handleSubmit = async (event: Event) => {
                     <div class="relative w-full group/phone">
                         
                         <div class="absolute left-3 top-1/2 -translate-y-1/2 flex items-center gap-2 z-20 pointer-events-none">
-                            <span v-if="detectedFlag" class="text-xl grayscale-0 leading-none animate-in fade-in slide-in-from-right-1 duration-200">
+                            <span v-if="detectedFlag" class="text-xl grayscale-0 leading-none animate-in fade-in slide-in-from-right-1">
                                 {{ detectedFlag }}
                             </span>
                             <span class="text-text-sub text-base font-medium select-none">+</span>
@@ -540,7 +540,7 @@ const handleSubmit = async (event: Event) => {
                             required 
                             placeholder=" "
                             :disabled="isLoading"
-                            class="peer w-full p-[14px_16px] text-base rounded bg-transparent border outline-none transition-all duration-300 z-1 focus:border-2 focus:p-[13px_15px] dark:hover:bg-white/2 dark:focus:bg-white/3 disabled:opacity-50 disabled:cursor-not-allowed"
+                            class="peer w-full p-[14px_16px] text-base rounded bg-transparent border outline-none transition-[top,transform,scale,color] z-1 focus:border-2 focus:p-[13px_15px] dark:hover:bg-white/2 dark:focus:bg-white/3 disabled:opacity-50 disabled:cursor-not-allowed"
                             :class="[
                                 detectedFlag ? 'pl-19 focus:pl-18.75' : 'pl-10 focus:pl-9.75',
                                 (phone && phoneError) 
@@ -550,7 +550,7 @@ const handleSubmit = async (event: Event) => {
                         >
                         
                         <label 
-                            class="absolute top-0 -translate-y-1/2 scale-75 bg-bg-body px-1 text-base font-normal leading-none duration-200 ease-standard will-change-[top,transform] pointer-events-none z-2 origin-left peer-focus:top-0 peer-focus:-translate-y-1/2 peer-focus:scale-75 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100"
+                            class="absolute top-0 -translate-y-1/2 scale-75 bg-bg-body px-1 text-base font-normal leading-none ease-standard will-change-[top,transform] pointer-events-none z-2 origin-left peer-focus:top-0 peer-focus:-translate-y-1/2 peer-focus:scale-75 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100"
                             :class="[
                             detectedFlag ? 'left-19' : 'left-10',
                             (phone && phoneError)
@@ -578,7 +578,7 @@ const handleSubmit = async (event: Event) => {
                         required 
                         placeholder=" "
                         :disabled="isLoading"
-                        class="peer w-full p-[14px_16px] text-base pr-12 rounded bg-transparent border outline-none transition-colors duration-300 z-1 focus:border-2 focus:p-[13px_15px] dark:hover:bg-white/2 dark:focus:bg-white/3 disabled:opacity-50 disabled:cursor-not-allowed"
+                        class="peer w-full p-[14px_16px] text-base pr-12 rounded bg-transparent border outline-none transition-[top,transform,scale,color] z-1 focus:border-2 focus:p-[13px_15px] dark:hover:bg-white/2 dark:focus:bg-white/3 disabled:opacity-50 disabled:cursor-not-allowed"
                         :class="[
                             (password && passwordError && !isLoginView)
                             ? 'border-[#d32f2f] text-[#d32f2f] focus:border-[#d32f2f] placeholder-shown:border-[#d32f2f]'
@@ -586,7 +586,7 @@ const handleSubmit = async (event: Event) => {
                         ]"
                     >
                     <label 
-                        class="absolute left-3 top-0 -translate-y-1/2 scale-75 bg-bg-body px-1 text-base font-normal leading-none duration-200 ease-standard will-change-[top,transform] pointer-events-none z-2 origin-left peer-focus:top-0 peer-focus:-translate-y-1/2 peer-focus:scale-75 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100"
+                        class="absolute left-3 top-0 -translate-y-1/2 scale-75 bg-bg-body px-1 text-base font-normal leading-none ease-standard will-change-[top,transform] pointer-events-none z-2 origin-left peer-focus:top-0 peer-focus:-translate-y-1/2 peer-focus:scale-75 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100"
                         :class="[
                             (password && passwordError && !isLoginView)
                             ? 'text-[#d32f2f] peer-focus:text-[#d32f2f] peer-placeholder-shown:text-[#d32f2f]'
@@ -597,7 +597,7 @@ const handleSubmit = async (event: Event) => {
                     </label>
                     <button type="button" 
                         @click="isPasswordVisible = !isPasswordVisible" 
-                        class="absolute right-0 top-0 h-full w-12 text-[#9ca3af] dark:text-[#6b7280] z-10 flex items-center justify-center bg-transparent border-none p-0 cursor-pointer hover:text-[#0d0d0d] dark:hover:text-white transition-colors duration-200">
+                        class="absolute right-0 top-0 h-full w-12 text-[#9ca3af] dark:text-[#6b7280] z-10 flex items-center justify-center bg-transparent border-none p-0 cursor-pointer hover:text-[#0d0d0d] dark:hover:text-white transition-[top,transform,scale,color]">
                         <span class="material-icons-round text-[18px]">{{ isPasswordVisible ? 'visibility_off' : 'visibility' }}</span>
                     </button>
                 </div>
@@ -621,7 +621,7 @@ const handleSubmit = async (event: Event) => {
                             required 
                             placeholder=" "
                             :disabled="isLoading"
-                            class="peer w-full p-[14px_16px] text-base pr-12 rounded bg-transparent border outline-none transition-colors duration-300 z-1 focus:border-2 focus:p-[13px_15px] dark:hover:bg-white/2 dark:focus:bg-white/3 disabled:opacity-50 disabled:cursor-not-allowed"
+                            class="peer w-full p-[14px_16px] text-base pr-12 rounded bg-transparent border outline-none transition-[top,transform,scale,color] z-1 focus:border-2 focus:p-[13px_15px] dark:hover:bg-white/2 dark:focus:bg-white/3 disabled:opacity-50 disabled:cursor-not-allowed"
                             :class="[
                                 (confirmPassword && confirmError)
                                 ? 'border-[#d32f2f] text-[#d32f2f] focus:border-[#d32f2f] placeholder-shown:border-[#d32f2f]'
@@ -629,7 +629,7 @@ const handleSubmit = async (event: Event) => {
                             ]"
                         >
                         <label 
-                            class="absolute left-3 top-0 -translate-y-1/2 scale-75 bg-bg-body px-1 text-base font-normal leading-none duration-200 ease-standard will-change-[top,transform] pointer-events-none z-2 origin-left peer-focus:top-0 peer-focus:-translate-y-1/2 peer-focus:scale-75 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100"
+                            class="absolute left-3 top-0 -translate-y-1/2 scale-75 bg-bg-body px-1 text-base font-normal leading-none ease-standard will-change-[top,transform] pointer-events-none z-2 origin-left peer-focus:top-0 peer-focus:-translate-y-1/2 peer-focus:scale-75 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100"
                             :class="[
                                 (confirmPassword && confirmError)
                                 ? 'text-[#d32f2f] peer-focus:text-[#d32f2f] peer-placeholder-shown:text-[#d32f2f]'
@@ -640,7 +640,7 @@ const handleSubmit = async (event: Event) => {
                         </label>
                         <button type="button" 
                             @click="isConfirmVisible = !isConfirmVisible" 
-                            class="absolute right-0 top-0 h-full w-12 text-[#9ca3af] dark:text-[#6b7280] z-10 flex items-center justify-center bg-transparent border-none p-0 cursor-pointer hover:text-[#0d0d0d] dark:hover:text-white transition-colors duration-200">
+                            class="absolute right-0 top-0 h-full w-12 text-[#9ca3af] dark:text-[#6b7280] z-10 flex items-center justify-center bg-transparent border-none p-0 cursor-pointer hover:text-[#0d0d0d] dark:hover:text-white transition-[top,transform,scale,color]">
                             <span class="material-icons-round text-[18px]">{{ isConfirmVisible ? 'visibility_off' : 'visibility' }}</span>
                         </button>
                     </div>
@@ -659,7 +659,7 @@ const handleSubmit = async (event: Event) => {
                             max="2100" 
                             required
                             :disabled="isLoading"
-                            class="peer w-full p-[14px_16px] text-base pr-12 rounded bg-transparent border outline-none transition-colors duration-300 z-1 focus:border-2 focus:p-[13px_15px] dark:hover:bg-white/2 dark:focus:bg-white/3 disabled:opacity-50 disabled:cursor-not-allowed"
+                            class="peer w-full p-[14px_16px] text-base pr-12 rounded bg-transparent border outline-none transition-[top,transform,scale,color] z-1 focus:border-2 focus:p-[13px_15px] dark:hover:bg-white/2 dark:focus:bg-white/3 disabled:opacity-50 disabled:cursor-not-allowed"
                             :class="[
                                 (yob && yobError)
                                 ? 'border-[#d32f2f] text-[#d32f2f] focus:border-[#d32f2f] placeholder-shown:border-[#d32f2f]'
@@ -667,7 +667,7 @@ const handleSubmit = async (event: Event) => {
                             ]"
                         >
                         <label 
-                            class="absolute left-3 top-0 -translate-y-1/2 scale-75 bg-bg-body px-1 text-base font-normal leading-none duration-200 ease-standard will-change-[top,transform] pointer-events-none z-2 origin-left peer-focus:top-0 peer-focus:-translate-y-1/2 peer-focus:scale-75 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100"
+                            class="absolute left-3 top-0 -translate-y-1/2 scale-75 bg-bg-body px-1 text-base font-normal leading-none ease-standard will-change-[top,transform] pointer-events-none z-2 origin-left peer-focus:top-0 peer-focus:-translate-y-1/2 peer-focus:scale-75 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100"
                             :class="[
                                 (yob && yobError)
                                 ? 'text-[#d32f2f] peer-focus:text-[#d32f2f] peer-placeholder-shown:text-[#d32f2f]'
@@ -682,11 +682,11 @@ const handleSubmit = async (event: Event) => {
                             v-click-outside="() => showYobTooltip = false"
                             :title="yobTooltipTitle">
         
-                            <span class="material-icons-round text-[18px] text-[#9ca3af] dark:text-[#6b7280] group-hover:text-[#0d0d0d] dark:group-hover:text-white transition-colors duration-200">
+                            <span class="material-icons-round text-[18px] text-[#9ca3af] dark:text-[#6b7280] group-hover:text-[#0d0d0d] dark:group-hover:text-white transition-[top,transform,scale,color]">
                                 info
                             </span>
 
-                            <div class="absolute bottom-full right-2 mb-2 w-max max-w-45 p-2 bg-[#1a1a1a] dark:bg-[#333333] text-white text-[11px] font-medium text-center rounded shadow-xl opacity-0 invisible transition-all duration-200 z-50 pointer-events-none
+                            <div class="absolute bottom-full right-2 mb-2 w-max max-w-45 p-2 bg-[#1a1a1a] dark:bg-[#333333] text-white text-[11px] font-medium text-center rounded shadow-xl opacity-0 invisible transition-[top,transform,scale,color] z-50 pointer-events-none
                                         group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto
                                         peer-focus:opacity-100 transform origin-bottom translate-y-1 group-hover:translate-y-0"
                                 :class="{'opacity-100 visible translate-y-0': showYobTooltip}">
@@ -716,7 +716,7 @@ const handleSubmit = async (event: Event) => {
         </div>
         </Transition>
 
-        <button type="submit" :disabled="isLoading" class="btn-primary full-width w-full p-3.5 text-base border-none rounded-md cursor-pointer font-semibold bg-[#0d0d0d] text-white hover:opacity-90 active:opacity-75 transition-opacity duration-300 dark:bg-[#ededed] dark:text-[#0d0d0d] flex justify-center items-center">
+        <button type="submit" :disabled="isLoading" class="btn-primary full-width w-full p-3.5 text-base border-none rounded-md cursor-pointer font-semibold bg-[#0d0d0d] text-white hover:opacity-90 active:opacity-75 transition-opacity dark:bg-[#ededed] dark:text-[#0d0d0d] flex justify-center items-center">
             <span v-if="isLoading" class="spinner border-2 border-transparent border-t-current rounded-full w-4 h-4 animate-spin"></span>
             <span v-else>{{ isLoginView ? $t('auth.form.btn_signin') : $t('auth.form.btn_signup') }}</span>
         </button>
